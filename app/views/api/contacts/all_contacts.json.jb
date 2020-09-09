@@ -1,0 +1,26 @@
+# my_contacts = []
+# index = 0
+
+# while index < @contacts.length 
+#   contact = @contact[index]
+#   contact_hash = {
+#   id: @contact.id,
+#   first_name: @contact.first_name,
+#   last_name: @contact.last_name,
+#   email: @contact.email,
+#   phone_number: @contact.phone_number
+#   }
+#   my_contacts << contact_hash
+#   index += 1
+# end
+
+@contacts.map do |contact| # |contact| = hash
+  {
+    id: contact.id,
+    first_name: contact.first_name,
+    last_name: contact.last_name,
+    email: contact.email,
+    phone_number: contact.phone_number
+  }
+end
+
